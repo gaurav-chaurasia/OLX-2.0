@@ -1,0 +1,38 @@
+<% if @product.errors.any? %>    
+    <ul>
+        <% @product.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>   
+<% end %>
+
+<%= form_for @product do |p| %>  
+<%# '@product' is an instanse variable passed from products controller through new action%>
+<%# form_for is an rails helper method %>
+    <p>
+        <%= p.label :Name  %><br>
+        <%= p.text_field :name %>
+    </p>
+    <p>
+        <%= p.label :Cost  %><br>
+        <%= p.number_field :cost %>
+    </p>
+    <p>
+        <%= p.label :Description %><br>
+        <%= p.text_area :description %>
+    </p>
+    <p>
+        <%= p.label :Age  %><br>
+        <%= p.number_field :age %>
+    </p>
+    <p>
+        <%= p.label :Address  %><br>
+        <%= p.text_area :address %>
+    </p>
+    <p>
+        <%= p.submit  %>
+    </p>
+<% end %>
+
+
+<%= link_to 'Back to Product listing', products_path %>

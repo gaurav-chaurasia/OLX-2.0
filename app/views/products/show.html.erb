@@ -1,0 +1,18 @@
+<h1>Showing the Product</h1>
+
+<p>
+    Name : <%= @product.name %>
+</p>
+<p>
+    Cost : <%= @product.cost %>
+</p>
+<p>
+    Description : <%= @product.description%>
+</p>
+<p>
+    Age : <%= @product.age %>
+</p>
+<p>
+    Address : <%= @product.address%>
+</p>
+<%= link_to 'Edit the Details', edit_product_path  %> | <%= link_to 'Back to Product listing', products_path %>
