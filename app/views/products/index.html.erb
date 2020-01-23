@@ -9,6 +9,8 @@
         <th> Description </th>
         <th> Age </th>
         <th> Address </th>
+        <th> Image </th>
+        <%# <th colspan="3"></th> %>
     </tr>
     <% @products.each do |product|%>  <%# this if for iterating through all products%>
     <tr>
@@ -16,7 +18,8 @@
         <td> <%= product.cost %> </td>
         <td> <%= product.description %> </td>
         <td> <%= product.age %> </td>
-        <td> <%= product.address %> </td> 
+        <td> <%= product.address %> </td>
+        <td> <%= image_tag(product.image, style: "width:25%;, height:auto") if product.image.attached?  %> </td> 
         <td> <%= link_to 'Show', product_path(product) %> </td>
         <td> <%= link_to 'Edit', edit_product_path(product) %> </td>
         <td> <%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: "Are you sure!!"} %> </td>

@@ -15,4 +15,7 @@
 <p>
     Address : <%= @product.address%>
 </p>
+<p>
+    Image : <%= image_tag(@product.image, style: "width:25%") if @product.image.attached?  %>
+</p>
 <%= link_to 'Edit the Details', edit_product_path  %> | <%= link_to 'Back to Product listing', products_path %>
