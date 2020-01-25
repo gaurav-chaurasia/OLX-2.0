@@ -1,24 +1,26 @@
 <h2 class="center"><%= @product.name %></h2>
-<div class="center show-container">
-    <div>
-        <%= image_tag(@product.image, style: "width:65rem; border-radius:2em 2em 0em 0em;") if @product.image.attached? %>
-    </div>
-    <div>
-        <h3>cost</h3> 
-        <p><%= @product.cost %> &#x20B9;</p>
+<div class="center">
+    <div class="show-container">
+        <div>
+            <%= image_tag(@product.image, style: "width:100%; border-radius:2em 2em 0em 0em;") if @product.image.attached? %>
+        </div>
+        <div>
+            <h3>cost</h3> 
+            <p><%= @product.cost %> &#x20B9;</p>
+            
+            <h3>description</h3>
+            <p><%= @product.description%></p>
+            
+            <h3>age</h3>
+            <p><%= @product.age %></p>
+            
+            <h3>address</h3>
+            <p><%= @product.address%></p>
+            
+            <%= link_to 'Edit the Details', edit_product_path, class:"btn btn-xs btn-primary show-btn" %>
+            <%= link_to 'Delete the product', product_path(@product), method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-xs btn-danger show-btn" %>
+            <%= link_to 'view all Products', products_path, class:"btn btn-xs btn-success show-btn" %>
         
-        <h3>description</h3>
-        <p><%= @product.description%></p>
-        
-        <h3>age</h3>
-        <p><%= @product.age %></p>
-        
-        <h3>address</h3>
-        <p><%= @product.address%></p>
-        
-        <%= link_to 'Edit the Details', edit_product_path, class:"btn btn-xs btn-primary show-btn" %>
-        <%= link_to 'Delete the product', product_path(@product), method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-xs btn-danger show-btn" %>
-        <%= link_to 'view all Products', products_path, class:"btn btn-xs btn-success show-btn" %>
-    
+        </div>
     </div>
 </div>
