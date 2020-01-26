@@ -10,6 +10,12 @@
             
             <h3>description</h3>
             <p><%= @product.description%></p>
+            <hr>
+            <h2 class="center"><%= link_to @product.user.username, user_path(@product.user) if @product.user %></h2>
+            <small> 
+                joined G:SHOP: <%= time_ago_in_words(@product.created_at)%> ago,
+                last updated: <%= time_ago_in_words(@product.updated_at) %> ago 
+            </small>
             
             <h3>age</h3>
             <p><%= @product.age %></p>

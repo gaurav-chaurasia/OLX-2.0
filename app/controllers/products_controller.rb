@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
     #Request: POST
     def create 
         @product = Product.new(product_params)
+        @product.user = User.first
         if @product.save
             flash[:success] = "product was successfully added"
             redirect_to product_path(@product)

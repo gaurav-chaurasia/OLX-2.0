@@ -1,0 +1,48 @@
+<%= render 'shared/errors', obj: @user %>
+
+<div class="row center">
+    <div class="col-sm-offset-2 col-xs-8">
+        <%= form_for(@user, :html => { class: "form-horizontal"}) do |p| %>  
+        <%# '@user' is an instanse variable passed from products controller through new action%>
+        <%# form_for is an rails helper method %>
+        
+        <div class="form-group">
+            <div class="contrl-lable col-sm-2">
+                <%= p.label :username  %>
+            </div>
+            <div class="col-sm-10">
+                <%= p.text_field :username, class: "form-control", placeholder: "Enter username", autofocus: true %>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="contrl-lable col-sm-2">
+                <%= p.label :Email  %>
+            </div>
+            <div class="col-sm-10">
+                <%= p.email_field :email, class: "form-control", placeholder: "Enter email" %>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="contrl-lable col-sm-2">
+                <%= p.label :Password %>
+            </div>
+            <div class="col-sm-10">
+                <%= p.password_field :password, class: "form-control", placeholder: "Enter password" %>
+            </div>  
+        </div>
+    
+        <div class="form-group center">
+            <div cass="col-sm-10">
+                <%= p.submit(@user.new_record? ? "Sign Up" : "Update account", class: "btn btn-primary btn-md") %>
+            </div>
+        </div>
+
+        <% end %>
+
+        <div class="center" style="margin:2rem 0;">
+           [ <%= link_to 'cancel and return to Product listing', products_path %> ]
+        </div>
+    </div>
+</div>
