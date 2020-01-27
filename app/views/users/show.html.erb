@@ -13,10 +13,13 @@
                     </strong><br>
                     added for sell: <%= time_ago_in_words(product.created_at)%> ago,
                     last updated: <%= time_ago_in_words(product.updated_at) %> ago 
+                    <strong>
+                        <p>Visibility :<%= product.visibility%>
+                    </strong>
                 </small>
                 <h2 class="center"><%= product.name %></h2>
-                <h3>cost</h3> 
-                <p><%= product.cost %> &#x20B9;</p>
+                <h3><small>cost:</small><%= product.cost %> &#x20B9;</h3>
+                <p>  </p> 
                 
                 <h3>description</h3>
                 <p><%= product.description%></p>

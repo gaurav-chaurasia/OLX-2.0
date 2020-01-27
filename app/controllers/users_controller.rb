@@ -46,7 +46,7 @@ class UsersController < ApplicationController
 
     def require_same_user
         if current_user != @user
-            flash[:danger] = "You can peform those action to only your own account"
+            flash[:danger] = "You can peform those action to only your own account and products"
             redirect_to root_path
         end
     end

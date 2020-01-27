@@ -1,6 +1,7 @@
 <h1 class="center"> Listing all Product ready for sells </h1>
 
 <% @products.each do |product|%>
+<% if product.visibility == true %>
     <div class="center">
         <div class="col-sm-4 details">
             <div>
@@ -28,4 +29,5 @@
             </div>
        </div>
     </div>
+    <% end %>
 <% end%>
