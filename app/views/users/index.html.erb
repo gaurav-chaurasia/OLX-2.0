@@ -4,7 +4,7 @@
 <% @users.each do |user|%>
     <div class="center">
         <div class="col-sm-5 user-details">
-            <h2 class="center"><%= link_to user.username, user_path(user) %></h2>
+            <h2 class="center"><%= link_to user.username, user == current_user ? user_path(user) : '#' %></h2>
             <small>
                 <h5><%= pluralize(user.products.count,"product") if user.products %></h5>
             </small>
