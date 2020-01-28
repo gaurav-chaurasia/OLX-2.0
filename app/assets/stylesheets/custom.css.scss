@@ -25,6 +25,24 @@
     color: green;
     transition-duration: 0.5s;
 }
+#logout-btn {
+    color: white;
+    padding: 1.5rem 3rem;
+}
+#logout-btn:hover {
+    transition-duration: 0.3s;
+    color: #d9534f;
+    border-color: #d9534f;
+}
+#login-btn {
+    color: white;
+    padding: 1.5rem 4rem;
+}
+#login-btn:hover {
+    transition-duration: 0.3s;
+    color: #0275d8;
+    border-color: #0275d8;
+}
 
 // center any thing with center class
 .center {
@@ -82,14 +100,26 @@
     box-shadow: 0px 1px 40px 0.1px #ada8a8;
 }
 .user-details {
-    height: 12rem;
+    height: 18rem;
     margin: 5rem 30rem;
     border-radius: 1em;
     box-shadow: 0px 1px 30px 0.1px #d4d4d4;
 }
-.user-details:hover {
-    box-shadow: 0px 1px 40px 0.1px #ada8a8;
-}
+// .user-details:hover {
+//     box-shadow: 0px 1px 40px 0.1px #ada8a8;
+// }
 .col-sm-4 {
     padding: 0rem;
+}
+// .dropdown-menu {
+//     border-radius: 1rem;
+//     border-top-left-radius: 1rem;
+//     border-top-right-radius: 1rem;
+// }
+.navbar-nav  li  .dropdown-menu {
+    margin-top: 0;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+#bs-example-navbar-collapse-1 {
 }

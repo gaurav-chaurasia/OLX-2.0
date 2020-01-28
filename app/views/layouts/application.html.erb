@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>G:SHOP</title>
+    <title><%= current_user.username  if logged_in?%><%= ' | ' if logged_in?%>G:SHOP</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -19,6 +19,5 @@
     </div>
 
     <%= render 'layouts/footer' %>
-    <%= debug(params)%>
   </body>
 </html>
