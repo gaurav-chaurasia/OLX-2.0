@@ -24,7 +24,11 @@
                     <%= link_to 'Edit the Details', edit_product_path(product), class:"btn btn-xs btn-primary show-btn" %>
                     <%= link_to 'Delete the product', product_path(product), method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-xs btn-danger show-btn" %>
                 <% end %>
-                <%= link_to 'Buy the Product', product_path(product), class:"btn btn-xs btn-success show-btn" %>
+                <% if product.user == current_user %>
+                    <%= link_to 'View the Details', product_path(product), class:"btn btn-xs btn-success show-btn" %>
+                <% else %>
+                    <%= link_to 'Buy the Product', product_path(product), class:"btn btn-xs btn-success show-btn" %>
+                <% end %>
             </div>
        </div>
     </div>
