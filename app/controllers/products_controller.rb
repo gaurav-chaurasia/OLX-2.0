@@ -4,13 +4,14 @@ class ProductsController < ApplicationController
     before_action :require_user, except: [:index, :show]
     before_action :require_same_user, only: [:edit, :update, :destroy]
 
-    # Get a list of all questions
+    # Get a list of all products visible to all user only
     # Requests: GET
     def index
         # products instance varible will have all products and then will iterate through all 
         @products = Product.all
     end
     
+    # Requests: GET
     def new 
         #new action for adding new product in product controller to product tabl/relation
         @product = Product.new #creating instance variable

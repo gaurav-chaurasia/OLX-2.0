@@ -2,14 +2,17 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:edit, :update, :show]
     before_action :require_same_user, only: [:edit, :update, :show]
 
+    # Requests: GET
     def index
         @users = User.all
     end
     
+    # Requests: GET
     def new
         @user = User.new
     end
 
+    #Request: POST
     def create
         @user = User.new(user_params)
         if @user.save
@@ -21,8 +24,12 @@ class UsersController < ApplicationController
         end
     end
 
+    # Requests: GET
     def edit
     end
+
+    #to update user
+    #Request: PATCH
     def update
         if @user.update(user_params)
             flash[:success] = "Your account was successfully updated"
@@ -32,6 +39,7 @@ class UsersController < ApplicationController
         end
     end
 
+    # Requests: GET
     def show
     end
 
