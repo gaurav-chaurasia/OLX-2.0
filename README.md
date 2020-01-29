@@ -45,18 +45,19 @@ and after adding small changes final could build beautiful UI
 List of all implemented features,
     1.Image upload capability
     2. user can control the visibility of products( :public, :only_me )
-    3. Active storage used for image storing feature
+    3. "Active storage used for image storing feature"
     4. only owner can edit, delete and update their products
     5. admin column to the user table and set false as default
     6. show page for separate user and user can see their products
     7. buy option for different user's products for own product view details option shown
     8. sold column added to product table and default value set false
-    9. all products are shown with created time and updated time also with user details(seller details)
+    9. "all products are shown with created time and updated time also with user details(seller details)"
     10. description is for clarifying the product details
+    11. "Admin users can add money to any User’s wallet including him/her self"
 
 List of non-implemented/planned features,
     1. Categories can be added to the product and 
-    2. wallet functionality could not be added although wallet added to every user
+
     3. user can search for products based on their category 
     4. more image can be added for the same product
     5. could not align products/index cards to the center 
@@ -68,3 +69,14 @@ so many references used so can't list out but majorly
 https://guides.rubyonrails.org/
 https://github.com/twbs/bootstrap-sass
 https://www.youtube.com/watch?v=fVtGy3QL9xg&t=82s
+
+to get excess to admin functionality first signup if you are new user or login if existing one  then head to the main directory of the project and go to rails console by simply typing 
+    rails console
+    
+and find your user id
+    u = User.all
+    u = User.find(id)
+    u.admin = true
+    u.save
+
+all done you are now an admin too
