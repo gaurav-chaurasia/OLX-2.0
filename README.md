@@ -1,7 +1,12 @@
 # README
 
 ###step:1 ~>
+---
+
+
 ##Installation needed for running application
+---
+
 
 a) Install MySQL and setup using these commands, make sure the password you select is easy to remember
 ```
@@ -10,13 +15,16 @@ a) Install MySQL and setup using these commands, make sure the password you sele
 ```
                     or               
 
-    ```sudo apt-get install mysql-server```
+```
+        sudo apt-get install mysql-server
+```
 
 for my case, I found the second one easy as while installation I get an interface in terminal asking for a password and could diminish some step  for secure_installation which I feel a very annoying step
 Note: After this setup, you should be able to run MySQL using this command, if not then try some of these issue links 
 ```
                             mysql -u root -p
 ```
+
 (In case you get the wrong password, do `sudo su`, then `mysql` create a new user with password and use that)
           If you face error 1698      if you face error 1045
 
@@ -26,11 +34,13 @@ b) Installing RubyOnRails using rvm (ruby version manager)
         sudo apt install curl
         sudo apt install gnupg2
 ``` 
+
    Now, run these commands to install rvm
 ```
         curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -  
         \curl -sSL https://get.rvm.io | bash -s stable
 ```
+
 Important: For RVM to work properly, you have to check the 'Run command as login shell' checkbox on the Title and Command tab of the terminal's Edit ▸ Profile Preferences menu dialog, in case the menu is missing right-click the terminal app and navigate Profiles ▸ Profile 
 
 Now, we will be using rails 5.2.2 with ruby 2.6.1
@@ -40,11 +50,13 @@ Now, we will be using rails 5.2.2 with ruby 2.6.1
         gem install bundler
         gem install rails -v 5.2.2
 ```
+
 Install mysql gem and the libmysql-dev library
 ```
         sudo apt install libmysqld-dev
         gem install mysql2
 ```
+
 Note: For some of the js gems
 ```
        sudo apt install nodejs
@@ -53,6 +65,7 @@ now clone my app and head to the folder in terminal and run
 ```
       rails server
 ```
+
 which will run the server and now go to 
 `
      localhost:3000
@@ -61,10 +74,12 @@ which will run the server and now go to
 
 ###step:2~> 
 
+
 initially I created basic structure(products table, user table, authentication) using scaffold generator and thought of adding a controller and required actions(methods) for different works but finally, I end up  build everything from scratch for better understanding for rails framework and it's  structure
 
 ```
 gem 'bootstrap-sass', '~> 3.4.1'
+
 ```
 
 bootstrap-sass 3 used for styling many parts of the app 
@@ -72,6 +87,7 @@ and after adding small changes final could build beautiful UI
 
 ##List of all implemented features,
   
+
 * Image upload capability
 * user can control the visibility of products( :public, :only_me )
 * "Active storage used for image storing feature"
@@ -86,6 +102,7 @@ and after adding small changes final could build beautiful UI
 
 ##List of non-implemented/planned features,
     
+
 * Categories can be added to the product and 
 * user can search for products based on their category 
 * more image can be added for the same product
@@ -109,4 +126,5 @@ and find your user id
     u.admin = true
     u.save
 ```
+
 all done you are now an admin too
