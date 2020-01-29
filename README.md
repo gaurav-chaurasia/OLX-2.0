@@ -1,10 +1,10 @@
 # README
 
-###step:1 ~>
+## step:1 ~>
 ---
 
 
-##Installation needed for running application
+## Installation needed for running application
 ---
 
 
@@ -14,7 +14,6 @@ a) Install MySQL and setup using these commands, make sure the password you sele
         sudo mysql_secure_installation
 ```
                     or               
-
 ```
         sudo apt-get install mysql-server
 ```
@@ -70,9 +69,9 @@ which will run the server and now go to
 `
      localhost:3000
 `
-###DONE THE INSTALLATIONS
+### DONE THE INSTALLATIONS
 
-###step:2~> 
+## step:2~> 
 
 
 initially I created basic structure(products table, user table, authentication) using scaffold generator and thought of adding a controller and required actions(methods) for different works but finally, I end up  build everything from scratch for better understanding for rails framework and it's  structure
@@ -85,7 +84,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 bootstrap-sass 3 used for styling many parts of the app 
 and after adding small changes final could build beautiful UI 
 
-##List of all implemented features,
+## List of all implemented features,
   
 
 * Image upload capability
@@ -100,7 +99,7 @@ and after adding small changes final could build beautiful UI
 * description is for clarifying the product details
 * "Admin users can add money to any User’s wallet including him/her self"
 
-##List of non-implemented/planned features,
+## List of non-implemented/planned features,
     
 
 * Categories can be added to the product and 
@@ -111,7 +110,7 @@ and after adding small changes final could build beautiful UI
 * live chat functionality can be added so buyer and seller can discuss about the product any time
 
 References
-so many references used so can't list out but majorly   
+so many references used so can't list out but some of them are
 `https://guides.rubyonrails.org/`  
 `https://github.com/twbs/bootstrap-sass`  
 `https://www.youtube.com/watch?v=fVtGy3QL9xg&t=82s`  
