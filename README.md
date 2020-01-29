@@ -60,16 +60,25 @@ Note: For some of the js gems
 ```
        sudo apt install nodejs
 ```
-now clone my app and head to the folder in terminal and run
-```
-      rails server
-```
 
-which will run the server and now go to 
-`
-     localhost:3000
-`
 ### DONE THE INSTALLATIONS
+
+* Clone the Repo:
+```
+    $ git clone https://github.com/gaurav-chaurasia/IRIS_181CV155_Ruby-On-Rails 
+```
+* Change directory into the folder named IRIS_181CV155_Ruby-On-Rails
+* Install all the gems
+```
+    $ bundle install
+```
+* Make migrations, Seed data into the database and Run the test server
+```
+    $ rake db:migrate
+    $ rake db:seed
+    $ rails server
+```
+* The above steps starts the development server on localhost:3000. Go to `http://localhost:3000/` in your browser. It will automatically redirect you to the Home page and then ask for Signup or Login.
 
 ## step:2~> 
 
