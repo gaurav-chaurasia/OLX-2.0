@@ -15,7 +15,7 @@
             <p><%= @product.age %></p>
             <hr>
             Seller Details
-            <h2 class="center"><%= link_to @product.user.username, user_path(@product.user) if @product.user %></h2>
+            <h2 class="center"><%= link_to @product.user.username, @product.user == current_user && logged_in? ? user_path(@product.user) : '#'%></h2>
             <small> 
                 joined G:SHOP: <%= time_ago_in_words(@product.created_at)%> ago,
                 last updated: <%= time_ago_in_words(@product.updated_at) %> ago 

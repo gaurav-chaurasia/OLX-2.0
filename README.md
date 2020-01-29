@@ -66,3 +66,5 @@ List of non-implemented/planned features,
 References
 so many references used so can't list out but majorly 
 https://guides.rubyonrails.org/
+https://github.com/twbs/bootstrap-sass
+https://www.youtube.com/watch?v=fVtGy3QL9xg&t=82s

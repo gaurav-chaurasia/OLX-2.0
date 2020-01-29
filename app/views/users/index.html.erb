@@ -12,7 +12,11 @@
                 joined G:SHOP: <%= time_ago_in_words(user.created_at)%> ago,
                 last updated: <%= time_ago_in_words(user.updated_at) %> ago 
             </small><br><br>
-            <% if user == current_user %>
+            <% if logged_in? && current_user.admin? %>
+                <%= link_to 'Delete your account', user_path(user), method: :delete, class:"btn btn-sm btn-danger" %>
+                <%= link_to 'change wallet amount', edit_user_path(user), class:"btn btn-sm btn-success" %>
+            <% end %>
+            <% if logged_in? && !user.admin? &&  current_user == user %>
                 <%= link_to 'Delete your account', '#', class:"btn btn-sm btn-danger" %>
             <% end %>
        </div>
