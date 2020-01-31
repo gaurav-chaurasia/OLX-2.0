@@ -33,7 +33,7 @@
             <% if @product.user == current_user %>
                 <%= link_to 'Back to product listing', products_path, class:"btn btn-sm btn-success show-btn" %>                
            <% else %>
-                <%= link_to 'Buy Now', products_path, class:"btn btn-sm btn-success show-btn" %>
+                <%= link_to 'Buy Now', toggle_status_buy_product_path(@product), class:"btn btn-sm btn-success show-btn" %>
            <% end %>
         
         </div>

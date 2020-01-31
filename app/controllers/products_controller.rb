@@ -1,6 +1,6 @@
 #controller going to look for new action under view/ products folder and then new 
 class ProductsController < ApplicationController
-    before_action :set_product, only: [:edit, :update, :show, :destroy]
+    before_action :set_product, only: [:edit, :update, :show, :destroy, :toggle_status_buy]
     before_action :require_user, except: [:index, :show]
     before_action :require_same_user, only: [:edit, :update, :destroy]
 
@@ -59,6 +59,21 @@ class ProductsController < ApplicationController
         @product.destroy
         flash[:danger] = "Product was successfully deleted"
         redirect_to products_path
+    end
+
+    def toggle_status_buy
+        if current_user.wallet >= @product.cost && logged_in?
+            current_user.wallet = current_user.wallet - @product.cost
+            @product.user_id = current_user.id
+            @product.sold = true
+            # current_user.wallet.save  #some error need to be fixed
+            @product.save
+            flash[:success] = "Product is succesfully purchased"
+            redirect_to user_path(current_user)
+        else
+            flash[:info] = "You don't have sufficient amount to buy this product"
+            redirect_to products_path
+        end
     end
 
     private

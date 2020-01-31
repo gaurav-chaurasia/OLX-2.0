@@ -10,7 +10,7 @@
             <div>
                 <small> 
                     <strong>
-                        <%= product.user.username if product.user %>
+                        <%= product.user.username if product.user %> | Sold-status: <%= product.sold %>
                     </strong><br>
                     added for sell: <%= time_ago_in_words(product.created_at)%> ago,
                     last updated: <%= time_ago_in_words(product.updated_at) %> ago 

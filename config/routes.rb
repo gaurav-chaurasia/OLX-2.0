@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
 
-  resources :products
+  resources :products do
+    member do
+        get :toggle_status_buy
+    end
+  end
 
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
