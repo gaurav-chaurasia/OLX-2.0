@@ -17,7 +17,7 @@
                 <%= link_to 'change wallet amount', edit_user_path(user), class:"btn btn-sm btn-success" %>
             <% end %>
             <% if logged_in? && !user.admin? &&  current_user == user %>
-                <%= link_to 'Delete your account', '#', class:"btn btn-sm btn-danger" %>
+                <%= link_to 'Delete your account', '#', class:"btn btn-sm btn-danger", data: { confirm: "Only Admins can delete users so contact Admin for any such action"} %>
             <% end %>
        </div>
     </div>
